@@ -125,10 +125,6 @@ Bagian ini menjelaskan instalasi komponen utama jika Anda belum memilikinya.
     *   Tambahkan `%SPARK_HOME%\bin` dan `%HADOOP_HOME%\bin` ke environment variable `Path` sistem Anda.
 5.  Restart komputer Anda jika Anda baru saja mengatur environment variables.
 
-### Visual Studio Code (Opsional)
-1.  Unduh dan instal VSCode dari [code.visualstudio.com](https://code.visualstudio.com/).
-2.  Instal ekstensi Python dari Microsoft.
-
 ## Menjalankan Aplikasi
 
 ### Langkah 1: Jalankan Zookeeper
@@ -200,20 +196,15 @@ Buka terminal ketiga di VSCode (atau terminal lain). Pastikan virtual environmen
 Tunggu beberapa saat, Anda akan melihat output analisis data di terminal ini.
 
 ## Contoh Output
-Output akan menampilkan status gudang dan peringatan kritis, seperti:
-```
-[STATUS GUDANG TERKINI]
-Gudang: G2
-  - Suhu: 73.0°C
-  - Kelembaban: 68.1%
-  - Status: Aman
+1. suhu_producer.py
+![image](https://github.com/user-attachments/assets/2a334b05-eb64-4e82-8955-f355d31cb317)
 
-[PERINGATAN KRITIS]
-Gudang: G4
-  - Suhu: 85.4°C
-  - Kelembaban: 73.2%
-  - Status: Bahaya tinggi! Barang berisiko rusak
-```
+2. kelembaban_producer.py
+![image](https://github.com/user-attachments/assets/06ec6535-733c-450e-9af4-7839dac503c5)
+
+3. pyspark_consumer_processor.py
+![image](https://github.com/user-attachments/assets/9e956ca6-5eeb-45cb-abd1-8684168acc66)
+
 
 ## Menghentikan Aplikasi
 1.  Tekan `Ctrl+C` di terminal PySpark (Consumer/Processor). Skrip sudah diatur untuk mencoba menghentikan SparkSession dengan bersih.
