@@ -1,6 +1,3 @@
-Tentu, ini adalah `README.md` yang diperbarui dengan penambahan bagian untuk meng-clone dari GitHub dan menggunakan `requirements.txt`, serta beberapa penyesuaian kecil untuk kejelasan.
-
-```markdown
 # Proyek Pemantauan Gudang Real-time dengan Kafka dan PySpark
 
 Proyek ini mensimulasikan sistem pemantauan suhu dan kelembaban gudang secara real-time menggunakan Apache Kafka sebagai message broker dan Apache Spark (PySpark) untuk pemrosesan stream data.
@@ -236,5 +233,3 @@ Gudang: G4
     *   Ini biasanya karena ketidakcocokan versi Scala antara instalasi Spark Anda dan package Kafka yang digunakan. Verifikasi versi Scala Spark Anda dengan `spark-shell`. Kemudian, pastikan variabel `KAFKA_PACKAGE` di dalam file `pyspark_consumer_processor.py` dikonfigurasi dengan benar menggunakan akhiran Scala (`_2.12` atau `_2.13`) dan versi Spark yang sesuai.
 *   **Python `IndentationError`**: Periksa spasi/tab yang tidak konsisten di kode Python Anda.
 *   **PySpark `TypeError: DataFrame.join() got an unexpected keyword argument 'joinType'`**: Ganti `joinType="inner"` menjadi `how="inner"` pada metode `join()` di skrip PySpark.
-
-```
