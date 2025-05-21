@@ -1,0 +1,22 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+*/.venv/
+*/venv/
+*/ENV/
+*/env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE / Editor specific files
+.vscode/
+# .idea/ # Jika Anda menggunakan IntelliJ/PyCharm
+
+# OS generated files
+.DS_Store
+Thumbs.db
