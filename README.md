@@ -189,7 +189,7 @@ Buka terminal ketiga di VSCode (atau terminal lain). Pastikan virtual environmen
     **PENTING:** Sesuaikan nilai `KAFKA_PACKAGE` di dalam file `spark_consumer/pyspark_consumer_processor.py` agar cocok dengan versi Spark dan Scala yang Anda gunakan. Contohnya sudah ada di dalam file tersebut. Perintah `spark-submit` akan menggunakan konfigurasi tersebut.
     ```bash
     # (.venv) PS D:\path\to\BigDataKafkaProject_502723012> 
-    spark-submit spark_consumer/pyspark_consumer_processor.py
+    spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 spark_consumer/pyspark_consumer_processor.py
     ```
     *Catatan: `KAFKA_PACKAGE` sekarang dikonfigurasi di dalam skrip PySpark, jadi tidak perlu `--packages` di sini lagi jika skrip sudah disesuaikan.*
 
