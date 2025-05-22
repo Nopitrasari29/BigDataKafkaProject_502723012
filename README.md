@@ -101,7 +101,7 @@ Bagian ini menjelaskan instalasi komponen utama jika Anda belum memilikinya.
 
 ### Java Development Kit (JDK)
 1.  Unduh dan instal JDK (misal, JDK 11 dari Oracle atau Adoptium Temurin).
-2.  Atur environment variable `JAVA_HOME` ke direktori instalasi JDK Anda (misal, `C:\Program Files\Java\jdk-11.0.15`).
+2.  Atur environment variable `JAVA_HOME` ke direktori instalasi JDK Anda (misal, `D:\Java\jdk-11.0.15`).
 3.  Tambahkan `%JAVA_HOME%\bin` ke environment variable `Path` sistem Anda.
 
 ### Python
@@ -119,9 +119,9 @@ Bagian ini menjelaskan instalasi komponen utama jika Anda belum memilikinya.
 3.  Atur environment variable `SPARK_HOME` ke direktori ini.
 4.  **Untuk Windows:**
     *   Unduh `winutils.exe` yang sesuai dengan versi Hadoop yang digunakan Spark Anda (misal, dari [GitHub cdarlint/winutils](https://github.com/cdarlint/winutils)).
-    *   Buat direktori `C:\hadoop\bin` (atau path lain).
-    *   Letakkan `winutils.exe` di `C:\hadoop\bin\`.
-    *   Atur environment variable `HADOOP_HOME` ke `C:\hadoop`.
+    *   Buat direktori `D:\hadoop\bin` (atau path lain).
+    *   Letakkan `winutils.exe` di `D:\hadoop\bin\`.
+    *   Atur environment variable `HADOOP_HOME` ke `D:\hadoop`.
     *   Tambahkan `%SPARK_HOME%\bin` dan `%HADOOP_HOME%\bin` ke environment variable `Path` sistem Anda.
 5.  Restart komputer Anda jika Anda baru saja mengatur environment variables.
 
@@ -159,12 +159,12 @@ Buka dua terminal di VSCode (atau terminal lain). Pastikan virtual environment `
 
 *   **Terminal 1 (Producer Suhu):**
     ```bash
-    # (.venv) PS C:\path\to\BigDataKafkaProject_502723012> 
+    # (.venv) PS D:\path\to\BigDataKafkaProject_502723012> 
     python kafka_producers/suhu_producer.py
     ```
 *   **Terminal 2 (Producer Kelembaban):**
     ```bash
-    # (.venv) PS C:\path\to\BigDataKafkaProject_502723012> 
+    # (.venv) PS D:\path\to\BigDataKafkaProject_502723012> 
     python kafka_producers/kelembaban_producer.py
     ```
 Biarkan kedua producer ini berjalan.
@@ -188,7 +188,7 @@ Buka terminal ketiga di VSCode (atau terminal lain). Pastikan virtual environmen
 2.  **Jalankan `spark-submit`:**
     **PENTING:** Sesuaikan nilai `KAFKA_PACKAGE` di dalam file `spark_consumer/pyspark_consumer_processor.py` agar cocok dengan versi Spark dan Scala yang Anda gunakan. Contohnya sudah ada di dalam file tersebut. Perintah `spark-submit` akan menggunakan konfigurasi tersebut.
     ```bash
-    # (.venv) PS C:\path\to\BigDataKafkaProject_502723012> 
+    # (.venv) PS D:\path\to\BigDataKafkaProject_502723012> 
     spark-submit spark_consumer/pyspark_consumer_processor.py
     ```
     *Catatan: `KAFKA_PACKAGE` sekarang dikonfigurasi di dalam skrip PySpark, jadi tidak perlu `--packages` di sini lagi jika skrip sudah disesuaikan.*
